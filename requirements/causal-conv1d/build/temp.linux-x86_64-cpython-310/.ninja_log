@@ -1,0 +1,9 @@
+# ninja log v5
+2	6488	1714209666979144534	/mnt/data_3/fugym/papers/paper5/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d_update.o	c020855af64d1b90
+1	14915	1714209675399098582	/mnt/data_3/fugym/papers/paper5/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d_fwd.o	4de9557d2d9b1c85
+1	24435	1714209684923046609	/mnt/data_3/fugym/papers/paper5/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d.o	bcdaac97d384c5dc
+1	42039	1714209702498950706	/mnt/data_3/fugym/papers/paper5/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d_bwd.o	545cdc227c5ab4d2
+327	7476	1714231533484399965	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d_update.o	ef213c538d461cec
+327	16210	1714231542216350764	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d_fwd.o	681ee80c9d47a5c9
+326	44432	1714231570416191949	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d_bwd.o	26e089ae61d9a3ef
+326	154609	1714231680619572330	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d.o	ff37f945587fbd4d

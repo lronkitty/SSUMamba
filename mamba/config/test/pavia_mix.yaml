@@ -1,0 +1,13 @@
+name: "pavia_mix"
+seed: ${seed}
+save_raw: true
+save_rgb: true
+save_rgb_crop: true
+save_labels: false
+idx_test: ""
+test_dir: "/nas_data/fugym/datasets/pavia/test/95_mixture/"
+gt_dir: "/nas_data/fugym/datasets/pavia/test/"
+b_size: 1
+kernel_size: [80,64,64]
+stride: [31,57,57]
+pad: [0,0,0]

@@ -1,0 +1,13 @@
+name: "icvl_95"
+seed: ${seed}
+save_raw: true
+save_rgb: true
+save_rgb_crop: true
+save_labels: false
+idx_test: ""
+test_dir: "/data_2/datasets/Denoising/test/ICVL/niid_minmax/95/"
+gt_dir: "/data_2/datasets/Denoising/test/ICVL/gt_minmax/"
+b_size: 1
+kernel_size: [31,64,64]
+stride: [31,57,57]
+pad: [0,0,0]

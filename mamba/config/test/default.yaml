@@ -1,0 +1,13 @@
+name: "icvl95"
+seed: ${seed}
+save_raw: true
+save_rgb: true
+save_rgb_crop: true
+save_labels: false
+idx_test: ""
+test_dir: "/data_2/fugym/SSRT/data/testing_sets/ICVL/test/95/"
+gt_dir: "/data_2/fugym/SSRT/data/testing_sets/test_crop/"
+b_size: 1
+kernel_size: [31,56,56]
+stride: [31,50,50]
+pad: [0,8,8]

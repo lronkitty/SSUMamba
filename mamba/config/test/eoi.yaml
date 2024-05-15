@@ -1,0 +1,13 @@
+name: "eoi"
+seed: ${seed}
+save_raw: true
+save_rgb: true
+save_rgb_crop: true
+save_labels: false
+idx_test: ""
+test_dir: "/home/fugym/nas_data/datasets/EOI/"  
+gt_dir: "/home/fugym/nas_data/datasets/EOI/"
+b_size: 1
+kernel_size: [166,56,56]
+stride: [31,50,50]
+pad: [0,8,8]

@@ -1,0 +1,12 @@
+optimizer:
+  class_name: "Adam"
+  params:
+    lr: 0.0005
+scheduler:
+  class_name: "MultiStepLR"
+  params:
+    gamma: 0.3
+    milestones:
+      - 20
+      - 35
+id: lr${optim.optimizer.lr}_Multstp${optim.scheduler.params.gamma}

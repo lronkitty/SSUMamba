@@ -1,0 +1,6 @@
+name: UniformNoise
+params:
+  sigma_min: 0
+  sigma_max: 95
+noise_level: ${noise.params.sigma_max}
+id: ${noise.name}-mi${noise.params.sigma_min}-ma${noise.params.sigma_max}

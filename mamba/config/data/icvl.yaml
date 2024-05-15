@@ -1,0 +1,26 @@
+name: "icvl"
+bs: 16
+ssl: 0
+n_ssl: 4
+split: 0
+bands: 31
+transform: 2
+params:
+  batch_size: ${data.bs}
+  factory: 
+    name: "ICVL"
+    params:
+      noise: ${noise}
+      seed: ${seed}
+      path_data: "data"
+      ssl: ${data.ssl}
+      split: ${data.split}
+  train_params:
+    patch_size: 64
+    stride: [64, 32, 32]
+    subsample: [1, 2, 4]
+    crop_center: 1024
+    repeat: 1
+    transform: ${data.transform}
+  num_workers: 2
+  bands: ${data.bands}

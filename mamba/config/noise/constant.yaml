@@ -1,0 +1,6 @@
+name: ConstantNoise
+params:
+  sigma: 50
+  seed: ${seed}
+noise_level: ${noise.params.sigma}
+id: ${noise.name}-v${noise.params.sigma}

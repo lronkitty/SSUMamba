@@ -1,0 +1,5 @@
+name: "test"
+folder: "tests"
+script: "test.py"
+prefix: ""
+suffix: "${test.idx_test}"

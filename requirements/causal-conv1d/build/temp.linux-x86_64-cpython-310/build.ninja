@@ -1,0 +1,35 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /usr/local/cuda-11.8/bin/nvcc
+
+cflags = -pthread -B /data/fugym/miniconda3/envs/mamba/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /data/fugym/miniconda3/envs/mamba/include -fPIC -O2 -isystem /data/fugym/miniconda3/envs/mamba/include -fPIC -I/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d -I/data/fugym/miniconda3/envs/mamba/lib/python3.10/site-packages/torch/include -I/data/fugym/miniconda3/envs/mamba/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/data/fugym/miniconda3/envs/mamba/lib/python3.10/site-packages/torch/include/TH -I/data/fugym/miniconda3/envs/mamba/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-11.8/include -I/data/fugym/miniconda3/envs/mamba/include/python3.10 -c
+post_cflags = -O3 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=causal_conv1d_cuda -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+cuda_cflags = -I/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d -I/data/fugym/miniconda3/envs/mamba/lib/python3.10/site-packages/torch/include -I/data/fugym/miniconda3/envs/mamba/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/data/fugym/miniconda3/envs/mamba/lib/python3.10/site-packages/torch/include/TH -I/data/fugym/miniconda3/envs/mamba/lib/python3.10/site-packages/torch/include/THC -I/usr/local/cuda-11.8/include -I/data/fugym/miniconda3/envs/mamba/include/python3.10 -c
+cuda_post_cflags = -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -O3 -U__CUDA_NO_HALF_OPERATORS__ -U__CUDA_NO_HALF_CONVERSIONS__ -U__CUDA_NO_BFLOAT16_OPERATORS__ -U__CUDA_NO_BFLOAT16_CONVERSIONS__ -U__CUDA_NO_BFLOAT162_OPERATORS__ -U__CUDA_NO_BFLOAT162_CONVERSIONS__ --expt-relaxed-constexpr --expt-extended-lambda --use_fast_math --ptxas-options=-v -lineinfo -gencode arch=compute_70,code=sm_70 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_90,code=sm_90 --threads 4 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=causal_conv1d_cuda -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+cuda_dlink_post_cflags = 
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc  $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+
+
+build /mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d.o: compile /mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/csrc/causal_conv1d.cpp
+build /mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d_bwd.o: cuda_compile /mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/csrc/causal_conv1d_bwd.cu
+build /mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d_fwd.o: cuda_compile /mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/csrc/causal_conv1d_fwd.cu
+build /mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/build/temp.linux-x86_64-cpython-310/csrc/causal_conv1d_update.o: cuda_compile /mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/causal-conv1d/csrc/causal_conv1d_update.cu
+
+
+
+
+
+

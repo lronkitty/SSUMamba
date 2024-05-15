@@ -1,0 +1,9 @@
+name: StripesNoise
+params:
+  ratio_bands: 0.33
+  ratio_columns: [0.05, 0.15]
+  stripe_intensity: 0.5
+  sigma: 25
+noise_level: ${noise.params.sigma}
+id: ${noise.name}-s${noise.params.sigma}-i${noise.params.stripe_intensity}
+

@@ -1,0 +1,6 @@
+name: CorrelatedNoise
+params:
+  beta: 23.08
+  eta: 0.157
+noise_level: ${noise.params.beta}
+id: ${noise.name}-b${noise.params.beta}-e${noise.params.eta}

@@ -1,0 +1,21 @@
+# ninja log v5
+0	21950	1714209733642780801	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan.o	69242962daae68e4
+3	85077	1714209796746436656	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_fwd_fp16.o	4674faf89d163f8f
+3	86011	1714209797658431683	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_fwd_fp32.o	5838f901e707f94d
+3	89844	1714209801502410725	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_fwd_bf16.o	d8bc8f348269ac0d
+3	150039	1714209861662082773	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_fp32_real.o	973063df97d23077
+2	157253	1714209868894043357	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_fp16_real.o	5264093a5fd4763d
+1	159537	1714209871186030865	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_bf16_real.o	cc27e023228fc7e3
+2	211918	1714209923549745518	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_fp32_complex.o	23a9a2c03a9371c0
+1	217291	1714209928901716357	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_fp16_complex.o	23ae91597670edef
+1	223659	1714209935261681706	/mnt/data_3/fugym/papers/paper5/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_bf16_complex.o	d78e5e1d6a385805
+326	86922	1714231813790825403	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_fwd_fp32.o	cd255b48848f237d
+326	86970	1714231813946824529	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_fwd_fp16.o	30dd8b905a723770
+326	89754	1714231816738808887	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_fwd_bf16.o	cafc00ffc4240957
+326	152946	1714231879802455762	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_fp32_real.o	d7574b7601880897
+325	158045	1714231884998426682	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_fp16_real.o	e99b36d9b4c65f8d
+324	158212	1714231885186425630	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_bf16_real.o	8ab20c90e9b0fc25
+323	199495	1714231926498194490	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan.o	38eb9ad9a6ccee9b
+325	218520	1714231945450088495	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_fp32_complex.o	9199adcb664b196b
+325	221037	1714231947978074359	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_fp16_complex.o	6815d440c34168e6
+323	225213	1714231952158050984	/mnt/data_3/fugym/papers/paper5/mamba/VideoMamba/mamba/build/temp.linux-x86_64-cpython-310/csrc/selective_scan/selective_scan_bwd_bf16_complex.o	c83276f145299cc3

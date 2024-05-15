@@ -1,0 +1,13 @@
+name: "gf5"
+seed: ${seed}
+save_raw: true
+save_rgb: true
+save_rgb_crop: true
+save_labels: false
+idx_test: ""
+test_dir: "/nas_data/xiongfc/RS/test/China/"
+gt_dir: "/nas_data/xiongfc/RS/test/China/"
+b_size: 1s
+kernel_size: [155,56,56]
+stride: [31,50,50]
+pad: [0,8,8]

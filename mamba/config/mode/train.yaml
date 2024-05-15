@@ -1,0 +1,5 @@
+name: "train"
+folder: "trainings"
+script: "train.py"
+prefix: "${hydra.job.num}_"
+suffix: ""

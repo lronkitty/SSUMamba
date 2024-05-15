@@ -1,0 +1,65 @@
+seed: 0
+
+defaults:
+  - mode: train
+  - data: icvl
+  - noise: uniform
+  - model: umamba
+  - trainer: default
+  - launcher: default
+  - test: default
+  - optim: default
+
+refine: False
+gpu_ids: 0
+ckpt_path: null
+checkpoint:
+  dirpath: "ckpts"
+  monitor: "val_mpsnr"
+  save_last: True
+  save_top_k: -1
+  mode: "max"
+  every_n_epochs: 1
+  filename: 'epoch{epoch}-val_mpsnr{val_mpsnr:.2f}'
+  auto_insert_metric_name: False
+  
+# checkpoint_best:
+#   dirpath: "best"
+#   monitor: "val_mpsnr"
+#   save_last: False
+#   save_top_k: 1
+#   mode: "max"
+#   every_n_epochs: 1
+#   filename: 'epoch_{epoch}-val_mpsnr_{val_mpsnr:.2f}'
+#   auto_insert_metric_name: False
+
+stdout: ${trainer.logging_level}
+
+hydra:
+  run:
+    dir: "./data/${mode.folder}/mamba/${model.id}"
+  sweep:
+    dir: "./data/${mode.folder}/mamba${cluster.id}"
+    subdir: "${mode.prefix}${model.id}/${mode.suffix}"
+  job_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(name)s][%(levelname)s] - %(message)s'
+      detailed:
+        format: '[%(asctime)s][%(name)s][%(levelname)s] - %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        level: ${stdout}
+        stream: ext://sys.stdout
+      file:
+        class : logging.handlers.RotatingFileHandler
+        formatter: detailed
+        level: DEBUG
+        filename: debug.log
+    root:
+      handlers: [console, file]
+
+    disable_existing_loggers: false

@@ -1,0 +1,10 @@
+name: "default"
+filename: "${launcher.name}.sh"
+walltime: "48:00:00"
+gpumodel: null
+gpuhost: null
+gpumem: null
+besteffort: false
+idempotent: false
+conda_env: "hsi"
+cmd: "main.py"

@@ -1,0 +1,12 @@
+logging_level: INFO
+params:
+  devices: null
+  max_epochs: 15
+  limit_val_batches: 1
+  log_every_n_steps: 5
+  check_val_every_n_epoch: 5
+  deterministic: False
+  benchmark: True
+  profiler: "simple"
+  num_sanity_val_steps: 0
+
