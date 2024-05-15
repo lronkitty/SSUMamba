@@ -7,7 +7,7 @@ The data can be download at https://njusteducn-my.sharepoint.com/:f:/g/personal/
 
 After you download the datasets, please modify the dir path in `mamba/config/test/*.yaml`
 
-Please install the requriment in ./ssumamba.yaml.
+- Please install the requriment in ./ssumamba.yaml.
 
 - Install PyTorch 2.1.1+cu118
 
