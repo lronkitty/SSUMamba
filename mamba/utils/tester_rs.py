@@ -367,5 +367,5 @@ class Tester:
         folder = MAT_DIR
         os.makedirs(folder, exist_ok=True)
         path_img = f"{folder}/{img_id}"
-        scipy.io.savemat(path_img,mdict={'ssrt':out[0].cpu().numpy()})
+        scipy.io.savemat(path_img,mdict={'ssumamba':out[0].cpu().numpy()})
         logger.debug(f"Image saved to {path_img!r}")
