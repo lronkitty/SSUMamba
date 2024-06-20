@@ -3,7 +3,7 @@ Code of "SSUMamba: Spatial-Spectral Selective State Space Model for Hyperspectra
 
 This code is strongly based on T3SC (https://github.com/inria-thoth/T3SC)
 
-The data can be download at https://njusteducn-my.sharepoint.com/:f:/g/personal/ironkitty_njust_edu_cn/EopcsxbL_TFJiQYEHkr9Wd8BllWJFvplYco2arbqgOhwMA?e=eqed5n .
+The data can be download at https://njusteducn-my.sharepoint.com/:f:/g/personal/321106020189_njust_edu_cn/ErC7SGyqgdlEm86mrlbZ-EwBUSPG9UJchCT-997L0IiNMA?e=kjfM6j .
 
 After you download the datasets, please modify the dir path in `mamba/config/test/*.yaml`
 
