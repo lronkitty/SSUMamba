@@ -21,3 +21,5 @@ After you download the datasets, please modify the dir path in `mamba/config/tes
   pip install -e requirements/causal-conv1d
   pip install -e requirements/mamba
   ```
+
+Then, you can try ```train*_sscs.sh``` or ```test*_sscs.sh``` to evaluate the ```SSUMamba with spatial-spectral continuous scan``` in our paper.
