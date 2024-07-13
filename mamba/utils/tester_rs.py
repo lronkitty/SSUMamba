@@ -198,7 +198,7 @@ class Tester:
                     inputs = col_data[0,:,:,:,:].unsqueeze(0)
                 else:
                     inputs = col_data
-                outputs = torch.empty_like(inputs).to('cpu')
+                outputs = torch.empty_like(inputs)
                 
                 start_time=time.time()
                 flops_sum = 0
@@ -210,8 +210,7 @@ class Tester:
                     # flops, params = profile(model, [inputs[b,:,:,:,:].to(self.device)])
                     # print(flops)
                     # flops_sum+=flops
-                    outputs[b:b+self.b_size,:,:,:,:] = model.forward(inputs[b:b+self.b_size,:,:,:,:].squeeze(1).to(self.device)).unsqueeze(1).to('cpu')
-                    torch.cuda.empty_cache()
+                    outputs[b:b+self.b_size,:,:,:,:] = model.forward(inputs[b:b+self.b_size,:,:,:,:].squeeze(1).to(self.device)).unsqueeze(1)
                 print(flops_sum)
                 logger.debug(f"flops_sum : {flops_sum}")
                 outputs = outputs[:,:,
