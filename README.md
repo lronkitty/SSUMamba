@@ -15,7 +15,7 @@ After you download the datasets, please modify the dir path in `mamba/config/tes
   pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
   ```
 
-- Install `causal_conv1d` and `mamba`
+- Install `causal_conv1d` and `mamba` from 'https://github.com/OpenGVLab/VideoMamba' or as follows,
 
   ```shell
   pip install -e requirements/causal-conv1d
